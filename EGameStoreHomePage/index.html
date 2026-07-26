@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(
+          to right,
+          #2c3137 0%,
+          #262a30 60%,
+          #22252a 100%
+        );
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .roboto {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+
+      .vazir {
+        font-family: "Vazirmatn", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+      }
+      .lato-thin {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      .lato-light {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      .lato-regular {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .lato-bold {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      .lato-black {
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+
+      .lato-thin-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 100;
+        font-style: italic;
+      }
+
+      .lato-light-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+
+      .lato-regular-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+
+      .lato-bold-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      .lato-black-italic {
+        font-family: "Lato", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+      }
+
+      .orngclr {
+        color: #ff5733;
+      }
+      .borderwhite {
+        border-color: white;
+      }
+      .bgfortnite {
+        background-image: url(./Images/fortnite.jpg);
+      }
+      .pad {
+        padding: 0.5rem;
+      }
+      .bgorng {
+        background-color: #ff5733;
+      }
+      .pxpy {
+        padding: 3px 8px;
+      }
+      @layer utilities {
+        .no-scrollbar {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="p-6">
+      <div
+        class="flex items-center justify-between bg-[#2D3238] max-md:bg-gradient-to-r from-[#2c3137] via-[#262a30] to-[#22252a]"
+      >
+        <div>
+          <img src="./Images/mainlogo.svg" alt="" />
+        </div>
+        <div class="sm:hidden"></div>
+        <div class="sm:hidden"></div>
+        <div class="sm:hidden"></div>
+        <div class="text-xs flex items-center gap-10">
+          <ul
+            class="text-white text-xs max-[900px]:text-[8px] flex items-center gap-10 max-sm:hidden max-[1100px]:gap-4 max-[900px]:gap-3"
+          >
+            <li class="font-semibold flex cursor-pointer">
+              <p
+                class="underline underline-offset-8 decoration-2 decoration-[#E87D0E]"
+              >
+                Hom
+              </p>
+              <p>e</p>
+            </li>
+            <li class="cursor-pointer">PC Games</li>
+            <li class="cursor-pointer">Xbox</li>
+            <li class="max-[780px]:hidden cursor-pointer">PlayStation</li>
+            <li class="cursor-pointer">Nintendo</li>
+            <li class="cursor-pointer">Gift Cards</li>
+            <li class="max-[780px]:hidden cursor-pointer">Deals</li>
+            <li class="cursor-pointer">Pre-orders</li>
+            <li class="cursor-pointer">Blog</li>
+          </ul>
+          <img src="./Images/Icon.svg" class="cursor-pointer" alt="" />
+        </div>
+        <div class="flex gap-6">
+          <select
+            name=""
+            id=""
+            class="text-white roboto cursor-pointer max-[780px]:hidden"
+          >
+            <option value="en">En</option>
+          </select>
+          <p
+            class="roboto text-white bg-[#FF6916] px-5 py-1 cursor-pointer rounded-md max-sm:hidden"
+          >
+            Sign In
+          </p>
+          <img
+            src="./Images/menuham.svg"
+            class="sm:hidden cursor-pointer"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+
+    <!-- hero section -->
+
+    <section
+      class="flex justify-between max-[900px]:justify-around relative bg-[url('./Images/herobg.png')] bg-cover bg-top bg-no-repeat before:content-[''] before:absolute before:inset-0 before:bg-[rgba(45,50,56,0.9)] before:z-0 h-[385px] max-[500px]:h-[240px] px-24 max-[1250px]:px-6 pt-4 pb-24"
+    >
+      <div class="relative z-10">
+        <div>
+          <p
+            class="text-[#FF6916] font-bold text-[40px] mt-4 max-[500px]:text-2xl max-[340px]:text-lg max-[260px]:text-sm"
+          >
+            Your Next Game Is
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-white font-bold text-[40px] mb-4 max-[500px]:text-2xl max-[340px]:text-lg max-[260px]:text-sm"
+          >
+            Just One Click Away.
+          </p>
+        </div>
+        <div>
+          <p
+            class="text-white font-medium text-lg max-[500px]:text-xs max-[340px]:text-[9px] max-[280px]:text-[5px]"
+          >
+            Get instant CDKeys for less — play in seconds.
+          </p>
+        </div>
+        <div class="flex gap-7 my-6">
+          <div
+            class="text-white text-xs cursor-pointer bg-[#FF6916] px-10 max-[500px]:px-5 py-3.5 max-[500px]:py-1 rounded-xl flex justify-center items-center shadow-[-9.11px_9.11px_22.77px_0_rgba(219,76,11,0.24)] hover:shadow-[-9.11px_9.11px_30px_0_rgba(219,76,11,0.35)] transition-shadow duration-300 max-[340px]:text-[9px] max-[300px]:text-[5px]"
+          >
+            Browse Deals
+          </div>
+          <div
+            class="text-white text-xs cursor-pointer border-[#FF6916] border-4 flex justify-center items-center px-10 max-[500px]:px-5 py-3.5 max-[500px]:py-1 rounded-xl max-[340px]:text-[9px] max-[340px]:border-2 max-[300px]:text-[5px]"
+          >
+            View Games
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4 relative z-10">
+        <div>
+          <p
+            class="font-semibold text-lg max-[900px]:text-sm text-white max-[660px]:hidden"
+          >
+            The Most <span class="text-[#FF6A16]"> Pupular </span> Games
+          </p>
+        </div>
+        <div class="flex gap-3.5 items-end">
+          <div>
+            <img
+              src="./Images/gameone.png"
+              class="h-56 w-auto cursor-pointer max-[660px]:hidden"
+              alt=""
+            />
+          </div>
+          <div class="flex gap-3.5">
+            <img
+              src="./Images/gametwo.png"
+              class="h-52 w-auto cursor-pointer max-[780px]:hidden"
+              alt=""
+            /><img
+              src="./Images/gamethree.png"
+              class="h-52 w-auto cursor-pointer max-[950px]:hidden"
+              alt=""
+            /><img
+              src="./Images/gamefour.png"
+              class="h-52 w-auto cursor-pointer max-[1120px]:hidden"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Genres  -->
+    <section
+      class="px-24 max-sm:pl-10 max-sm:pr-10 max-[505px]:pr-0 max-[200px]:px-6 mt-28 max-[505px]:mt-8 mb-10 w-full"
+    >
+      <div class="flex flex-col gap-6">
+        <div class="flex gap-6 w-full max-[505px]:hidden">
+          <div
+            class="bg-[url('./Images/racinggenre.png')] h-48 w-1/2 bg-cover cursor-pointer bg-center bg-no-repeat rounded-xl shadow-[0_1px_8px_0_rgba(219,76,11,0.12)] hover:shadow-[0_2px_12px_0_rgba(219,76,11,0.2)] transition-shadow duration-300 before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative p-4"
+          >
+            <p
+              class="vazir text-white font-semibold text-lg max-[700px]:text-sm max-[550px]:text-xs flex flex-col justify-end h-full relative z-10"
+            >
+              Sports & Racing
+            </p>
+          </div>
+          <div class="flex gap-6 w-1/2">
+            <div
+              class="bg-[url('./Images/RPG.png')] h-48 w-1/2 bg-cover cursor-pointer bg-center bg-no-repeat rounded-xl shadow-[0_1px_8px_0_rgba(219,76,11,0.12)] hover:shadow-[0_2px_12px_0_rgba(219,76,11,0.2)] transition-shadow duration-300 before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative p-3"
+            >
+              <p
+                class="vazir text-white font-semibold text-lg max-[700px]:text-sm max-[550px]:text-xs flex flex-col justify-end h-full relative z-10"
+              >
+                RPG
+              </p>
+            </div>
+            <div
+              class="bg-[url('./Images/advgen.png')] h-48 w-1/2 bg-cover cursor-pointer bg-center bg-no-repeat rounded-xl shadow-[0_1px_8px_0_rgba(219,76,11,0.12)] hover:shadow-[0_2px_12px_0_rgba(219,76,11,0.2)] transition-shadow duration-300 before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative p-3"
+            >
+              <p
+                class="vazir text-white font-semibold text-lg max-[700px]:text-sm max-[550px]:text-xs flex flex-col justify-end h-full relative z-10"
+              >
+                Adventure
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-6 w-full">
+          <div class="flex gap-6 w-1/2 max-[505px]:w-full">
+            <div
+              class="bg-[url('./Images/strategy.jpg')] h-48 cursor-pointer max-[505px]:h-40 w-1/2 bg-cover bg-center bg-no-repeat rounded-xl shadow-[0_1px_8px_0_rgba(219,76,11,0.12)] hover:shadow-[0_2px_12px_0_rgba(219,76,11,0.2)] transition-shadow duration-300 before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative p-3"
+            >
+              <p
+                class="vazir text-white font-semibold text-lg max-[700px]:text-sm max-[550px]:text-xs max-[505px]:text-sm flex flex-col justify-end h-full relative z-10"
+              >
+                Strategy
+              </p>
+            </div>
+            <div
+              class="bg-[url('./Images/survival.jpg')] h-48 cursor-pointer max-[505px]:h-40 w-1/2 bg-cover bg-center bg-no-repeat rounded-xl shadow-[0_1px_8px_0_rgba(219,76,11,0.12)] hover:shadow-[0_2px_12px_0_rgba(219,76,11,0.2)] transition-shadow duration-300 before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative p-3"
+            >
+              <p
+                class="vazir text-white font-semibold text-lg max-[700px]:text-sm max-[550px]:text-xs max-[505px]:text-sm flex flex-col justify-end h-full relative z-10"
+              >
+                Survival
+              </p>
+            </div>
+          </div>
+          <div
+            class="bg-[url('./Images/action.jpg')] h-48 w-1/2 cursor-pointer bg-cover bg-center bg-no-repeat rounded-xl shadow-[0_1px_8px_0_rgba(219,76,11,0.12)] hover:shadow-[0_2px_12px_0_rgba(219,76,11,0.2)] transition-shadow duration-300 before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative p-4 max-[505px]:hidden"
+          >
+            <p
+              class="vazir text-white font-semibold text-lg max-[700px]:text-sm max-[550px]:text-xs flex flex-col justify-end h-full relative z-10"
+            >
+              Action
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Games -->
+    <section>
+      <div class="my-16">
+        <div
+          class="flex mx-10 justify-between translate-y-60 max-[1000px]:hidden"
+        >
+          <div>
+            <img
+              src="./Images/leftslidearrow.svg"
+              class="cursor-pointer"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="./Images/rightslidearrow.svg"
+              class="cursor-pointer"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="px-24 max-sm:px-10 flex gap-14 max-[300px]:gap-4 items-end">
+          <div>
+            <p class="vazir font-bold text-2xl max-[450px]:text-sm text-white">
+              Trending Games
+            </p>
+          </div>
+          <div class="flex gap-1 text-end">
+            <p class="vazir orngclr text-lg cursor-pointer max-[450px]:text-xs">
+              View All
+            </p>
+            <div>
+              <img
+                src="./Images/nextarrow.svg"
+                class="w-5 max-[450px]:w-3"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex w-full gap-4 px-24 max-sm:px-10 mt-10 overflow-x-scroll no-scrollbar scroll-smooth"
+          >
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bgfortnite h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div><p class="text-white vazir text-sm">Fortnite</p></div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 cursor-pointer py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] cursor-pointer border border-[#FF6916] w-1/2 py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/minecraft.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div><p class="text-white vazir text-sm">MineCraft</p></div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 cursor-pointer py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 cursor-pointer py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/csgo.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-white vazir text-sm">Counter Strike</p>
+                  </div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/spiderman.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div><p class="text-white vazir text-sm">Spiderman</p></div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/witcher.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-white vazir text-sm">The Witcher 3</p>
+                  </div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3 justify-center m-6">
+          <img src="./Images/orangedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Tournament -->
+    <p
+      class="font-bold text-xl max-[270px]:text-sm text-white text-center sm:hidden"
+    >
+      <span class="text-[#FF6916]">Join</span> The Big Tournaments
+    </p>
+    <section class="h-188.5 max-[500px]:h-140 max-[300px]:h-100">
+      <div class="flex mx-8 justify-between translate-y-60">
+        <div>
+          <img
+            src="./Images/leftslidearrow.svg"
+            class="border border-[#acacac6d] px-4 cursor-pointer py-2 max-[1000px]:hidden"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            src="./Images/righthandside.svg"
+            class="border border-[#c1c1c16d] px-4 cursor-pointer py-2 max-[1000px]:hidden"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="relative h-175 max-[1000px]:h-130 max-[500px]:h-80 max-[250px]:h-52 mx-24 max-[1250px]:mx-6 max-md:mx-0 bg-[url('/Images/tourbg.jpg')] bg-cover bg-bottom bg-no-repeat rounded-xl overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-[rgba(45,50,56,0.9)] z-0"></div>
+        <div
+          class="absolute bottom-0 inset-x-0 h-2/3 bg-linear-to-t from-[rgba(255,106,22,0.35)] via-[rgba(255,106,22,0.15)] to-transparent blur-xl z-0"
+        ></div>
+        <div>
+          <img
+            src="./Images/leftslidearrow.svg"
+            class="border border-[#acacac6d] ml-4 cursor-pointer px-4 py-2 translate-y-56 max-sm:translate-y-40 max-[300px]:translate-y-12 md:hidden"
+            alt=""
+          />
+        </div>
+        <div
+          class="relative z-10 flex flex-col justify-between pt-10 max-md:pt-0 gap-8 px-1"
+        >
+          <p
+            class="font-bold text-6xl max-[900px]:text-3xl text-white text-center max-sm:hidden"
+          >
+            <span class="text-[#FF6916]">Join</span> The Big Tournaments
+          </p>
+
+          <div class="w-full max-md:ml-24 max-[300px]:ml-0">
+            <div
+              class="flex justify-center max-md:justify-start w-full gap-6 max-[1000px]:gap-3 max-md:gap-1 overflow-x-scroll no-scrollbar scroll-smooth"
+            >
+              <img
+                src="./Images/groupone.png"
+                class="w-[14.5%] max-md:w-1/4 cursor-pointer max-sm:w-1/2 max-[500px]:w-24"
+              />
+              <img
+                src="./Images/grouptwo.png"
+                class="w-[14.5%] max-md:w-1/4 cursor-pointer max-sm:w-1/2 max-[500px]:w-24"
+              />
+              <img
+                src="./Images/group3.png"
+                class="w-[14.5%] max-md:w-1/4 cursor-pointer max-sm:w-1/2 max-[500px]:w-24"
+              />
+              <img
+                src="./Images/group4.png"
+                class="w-[14.5%] max-md:w-1/4 cursor-pointer max-sm:w-1/2 max-[500px]:w-24"
+              />
+              <img
+                src="./Images/group5.png"
+                class="w-[14.5%] max-md:w-1/4 cursor-pointer max-sm:w-1/2 max-[500px]:w-24"
+              />
+              <img
+                src="./Images/group6.png"
+                class="w-[14.5%] max-md:w-1/4 cursor-pointer max-sm:w-1/2 max-[500px]:w-24"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-center mx-24 max-md:mx-0 transform -translate-y-76 max-[1000px]:-translate-y-24 shrink max-[500px]:translate-y-0 max-md:justify-start max-sm:hidden"
+      >
+        <img src="./Images/tourframe.png" />
+      </div>
+      <div
+        class="flex justify-center mx-24 max-md:mx-0 transform -translate-y-76 max-[1000px]:-translate-y-24 shrink max-[500px]:translate-y-0 max-md:justify-start sm:hidden"
+      >
+        <img src="./Images/tourframetwo.png" />
+      </div>
+    </section>
+
+    <!-- Bestsellers -->
+    <section>
+      <div class="my-24">
+        <div
+          class="flex mx-10 justify-between translate-y-60 max-[1000px]:hidden"
+        >
+          <div>
+            <img
+              src="./Images/leftslidearrow.svg"
+              class="cursor-pointer border border-[#ffffff49] px-2.5 py-1"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="./Images/orangerightarrow.svg"
+              class="cursor-pointer border border-[#ff6816a2] px-2.5 py-1"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="px-24 max-sm:px-10 flex gap-14 max-[300px]:gap-4 items-end">
+          <div>
+            <p class="vazir font-bold text-2xl max-[450px]:text-sm text-white">
+              Bestsellers
+            </p>
+          </div>
+          <div class="flex gap-1 text-end">
+            <p class="vazir orngclr text-lg cursor-pointer max-[450px]:text-xs">
+              View All
+            </p>
+            <div>
+              <img
+                src="./Images/nextarrow.svg"
+                class="w-5 max-[450px]:w-3"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex w-full gap-4 px-24 max-sm:px-10 mt-10 overflow-x-scroll no-scrollbar scroll-smooth"
+          >
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bgfortnite h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div><p class="text-white vazir text-sm">Fortnite</p></div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 cursor-pointer py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] cursor-pointer border border-[#FF6916] w-1/2 py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/minecraft.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div><p class="text-white vazir text-sm">MineCraft</p></div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 cursor-pointer py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 cursor-pointer py-1.5 rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/csgo.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-white vazir text-sm">Counter Strike</p>
+                  </div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/spiderman.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div><p class="text-white vazir text-sm">Spiderman</p></div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border borderwhite rounded-xl pad">
+              <div
+                class="bg-[url('./Images/witcher.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              >
+                <span class="text-white font-light text-xs bgorng pxpy rounded"
+                  >15%</span
+                >
+              </div>
+              <div>
+                <div class="mt-3 flex items-center justify-between">
+                  <div>
+                    <p class="text-white vazir text-sm">The Witcher 3</p>
+                  </div>
+                  <div class="flex">
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/orngstar.svg" width="15" alt="" />
+                    <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+                  </div>
+                </div>
+                <div class="my-2 flex justify-between">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                  <div class="flex gap-1">
+                    <div><img src="./Images/xicon.svg" alt="" /></div>
+                    <div class="flex items-center">
+                      <p class="vazir text-[#FFCC00]">81</p>
+                      <p class="vazir font-light text-xs text-[#979797]">
+                        /100
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 justify-between">
+                  <div
+                    class="border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Add to Cart
+                    </p>
+                  </div>
+                  <div
+                    class="bg-[#FF6916] border border-[#FF6916] w-1/2 py-1.5 cursor-pointer rounded-lg flex items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Buy Now
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3 justify-center m-6">
+          <img src="./Images/orangedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Up Coming Games -->
+    <section>
+      <div class="my-24">
+        <div class="px-24 max-sm:px-10 flex gap-14 max-[300px]:gap-4 items-end">
+          <div>
+            <p class="vazir font-bold text-2xl max-[450px]:text-sm text-white">
+              Up Coming Games
+            </p>
+          </div>
+          <div class="flex gap-1 text-end">
+            <p class="vazir orngclr text-lg cursor-pointer max-[450px]:text-xs">
+              View All
+            </p>
+            <div>
+              <img
+                src="./Images/nextarrow.svg"
+                class="w-5 max-[450px]:w-3"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex w-full gap-4 px-24 max-sm:px-10 mt-10 overflow-x-scroll no-scrollbar scroll-smooth"
+          >
+            <div class="w-full border border-[#FA8305] rounded-xl pad">
+              <div
+                class="bg-[url('./Images/FC25.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              ></div>
+              <div>
+                <div class="mt-3 flex items-center">
+                  <div><p class="text-white vazir text-sm">FC25</p></div>
+                </div>
+                <div class="my-2 flex">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                </div>
+                <div class="flex justify-between pt-1.5">
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <img src="./Images/clndricon.svg" alt="" /><span
+                      class="font-light text-[0.65rem] text-[#979797]"
+                      >27/10/2025</span
+                    >
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Pre-Order
+                    </p>
+                    <img src="./Images/orangearrowrightside.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border border-[#FA8305] rounded-xl pad">
+              <div
+                class="bg-[url('./Images/wolverine.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              ></div>
+              <div>
+                <div class="mt-3 flex items-center">
+                  <div>
+                    <p class="text-white vazir text-sm">Marvel: Wolverine</p>
+                  </div>
+                </div>
+                <div class="my-2 flex">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                </div>
+                <div class="flex justify-between pt-1.5">
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <img src="./Images/clndricon.svg" alt="" /><span
+                      class="font-light text-[0.65rem] text-[#979797]"
+                      >Early 2025</span
+                    >
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Pre-Order
+                    </p>
+                    <img src="./Images/orangearrowrightside.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border border-[#FA8305] rounded-xl pad">
+              <div
+                class="bg-[url('./Images/starwars.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              ></div>
+              <div>
+                <div class="mt-3 flex items-center">
+                  <div>
+                    <p class="text-white vazir text-sm">Star Wars Outlaws</p>
+                  </div>
+                </div>
+                <div class="my-2 flex">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                </div>
+                <div class="flex justify-between pt-1.5">
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <img src="./Images/clndricon.svg" alt="" /><span
+                      class="font-light text-[0.65rem] text-[#979797]"
+                      >Mid 2025</span
+                    >
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Pre-Order
+                    </p>
+                    <img src="./Images/orangearrowrightside.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border border-[#FA8305] rounded-xl pad">
+              <div
+                class="bg-[url('./Images/GTA6.png')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              ></div>
+              <div>
+                <div class="mt-3 flex items-center">
+                  <div><p class="text-white vazir text-sm">GTA VI</p></div>
+                </div>
+                <div class="my-2 flex">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                </div>
+                <div class="flex justify-between pt-1.5">
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <img src="./Images/clndricon.svg" alt="" /><span
+                      class="font-light text-[0.65rem] text-[#979797]"
+                      >Late 2025</span
+                    >
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Pre-Order
+                    </p>
+                    <img src="./Images/orangearrowrightside.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full border border-[#FA8305] rounded-xl pad">
+              <div
+                class="bg-[url('./Images/witchersfour.jpg')] h-56 w-full min-w-44 bg-cover bg-center bg-no-repeat rounded-lg border"
+              ></div>
+              <div>
+                <div class="mt-3 flex items-center">
+                  <div>
+                    <p class="text-white vazir text-sm">The Witcher 4</p>
+                  </div>
+                </div>
+                <div class="my-2 flex">
+                  <div class="flex items-end gap-1">
+                    <p
+                      class="line-through vazir font-light text-xs text-[#979797] flex"
+                    >
+                      60$
+                    </p>
+                    <p class="vazir text-white flex">51$</p>
+                  </div>
+                </div>
+                <div class="flex justify-between pt-1.5">
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <img src="./Images/clndricon.svg" alt="" /><span
+                      class="font-light text-[0.65rem] text-[#979797]"
+                      >Mid 2026</span
+                    >
+                  </div>
+                  <div
+                    class="cursor-pointer rounded-lg flex gap-1 items-center justify-center"
+                  >
+                    <p class="vazir font-light text-[0.7rem] text-white">
+                      Pre-Order
+                    </p>
+                    <img src="./Images/orangearrowrightside.svg" alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-3 justify-center m-6">
+          <img src="./Images/orangedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+          <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Deals -->
+    <section>
+      <div class="flex mx-24 gap-6 max-[600px]:mx-10">
+        <div
+          class="flex flex-col gap-6 max-[600px]:gap-1 w-[45%] max-[800px]:w-full py-6"
+        >
+          <div>
+            <p class="font-bold text-4xl text-white">
+              <span class="text-[#FF6916]"> Play Your Best Game <br /></span> &
+              Collect Epic Deals
+            </p>
+          </div>
+          <div>
+            <p class="font-medium text-lg text-white max-[300px]:hidden">
+              Discover limited-time discounts on top-selling games, gift cards,
+              and bundles. New deals added every day — don’t miss out!
+            </p>
+          </div>
+          <div>
+            <div class="flex gap-7 my-6 w-full">
+              <div
+                class="text-white text-xs cursor-pointer bg-[#FF6916] px-10 max-[500px]:px-5 py-3.5 max-[500px]:py-1 rounded-xl flex justify-center items-center shadow-[-9.11px_9.11px_22.77px_0_rgba(219,76,11,0.24)] hover:shadow-[-9.11px_9.11px_30px_0_rgba(219,76,11,0.35)] transition-shadow duration-300 max-[340px]:text-[9px] max-[300px]:text-[5px]"
+              >
+                Browse Deals
+              </div>
+              <div
+                class="text-white text-xs cursor-pointer border-[#FF6916] border-4 flex justify-center items-center px-10 max-[500px]:px-5 py-3.5 max-[500px]:py-1 rounded-xl max-[340px]:text-[9px] max-[340px]:border-2 max-[300px]:text-[5px]"
+              >
+                View Games
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-[55%] bg-[url('./Images/CTA.png')] bg-cover bg-no-repeat max-[800px]:hidden"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="m-24 max-sm:m-10 max-[400px]:mx-0">
+      <div>
+        <p class="vazir font-bold text-2xl max-[450px]:text-sm text-white">
+          Customer Reviews
+        </p>
+      </div>
+      <div class="flex justify-between max-[960px]:justify-center py-6">
+        <div
+          class="w-80 h-100 bg-[url('./Images/reviewleft.png')] bg-no-repeat bg-contain bg-center p-18 flex flex-col gap-1 items-center max-[960px]:hidden"
+        >
+          <div>
+            <img
+              src="./Images/leo.jpg"
+              class="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 rounded-full object-cover object-top"
+              alt=""
+            />
+          </div>
+          <div><p class="lato-bold text-white text-xl">Leo</p></div>
+          <div class="flex gap-1.5">
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+          </div>
+          <div class="py-2">
+            <p class="text-white lato-regular text-[9px]">
+              Step into a world where every click leads to a new adventure! With
+              a sleek design, a massive game library, and lightning-fast
+              performance, you’ll never want to log out.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-96 h-110 max-[460px]:h-56 bg-[url('./Images/centerreview.png')] bg-no-repeat bg-contain bg-center p-12 max-[460px]:px-0 max-[460px]:py-12 flex flex-col gap-1 items-center"
+        >
+          <div class="-translate-x-4">
+            <img
+              src="./Images/hannah.jpg"
+              class="w-20 h-20 rounded-full object-cover object-top"
+              alt=""
+            />
+          </div>
+          <div class="-translate-x-4">
+            <p
+              class="lato-bold text-white text-xl max-[500px]:text-sm max-[340px]:text-xs"
+            >
+              Hannah Schmitt
+            </p>
+          </div>
+          <div class="flex gap-1.5 -translate-x-4">
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+          </div>
+          <div class="p-2 -translate-x-4">
+            <p class="text-white lato-regular text-sm max-[460px]:hidden">
+              Get ready to level up your fun! This site delivers thrilling
+              games, non-stop updates, and a smooth, blazing-fast experience
+              that keeps you hooked for hours.
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-80 h-100 bg-[url('./Images/reviewleft.png')] bg-no-repeat bg-contain bg-center scale-x-[-1] p-18 flex flex-col gap-1 items-center max-[960px]:hidden"
+        >
+          <div class="scale-x-[-1]">
+            <img
+              src="./Images/lina.jpg"
+              class="w-6 h-6 sm:w-10 sm:h-10 md:w-14 md:h-14 rounded-full object-cover scale-x-[-1]"
+              alt=""
+            />
+          </div>
+          <div class="scale-x-[-1]">
+            <p class="lato-bold text-white text-sm">Hannah Schmitt</p>
+          </div>
+          <div class="flex gap-1.5 scale-x-[-1]">
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/orngstar.svg" width="15" alt="" />
+            <img src="./Images/emptyorngstar.svg" width="15" alt="" />
+          </div>
+          <div class="py-2 scale-x-[-1]">
+            <p class="text-white lato-regular text-[9px]">
+              Your ultimate gaming destination is here bold, exciting, and
+              packed with endless adventures. Play, explore, and conquer without
+              limits!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-3 justify-center">
+        <img src="./Images/orangedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+      </div>
+    </section>
+
+    <!-- Blog Post -->
+    <section>
+      <div class="px-26 max-sm:px-10 flex gap-14 max-[300px]:gap-4 items-end">
+        <div>
+          <p class="vazir font-bold text-2xl max-[450px]:text-sm text-white">
+            Blog Post
+          </p>
+        </div>
+        <div class="flex gap-1 text-end">
+          <p class="vazir orngclr text-lg cursor-pointer max-[450px]:text-xs">
+            View All
+          </p>
+          <div>
+            <img
+              src="./Images/nextarrow.svg"
+              class="w-5 max-[450px]:w-3"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Blogs -->
+      <div class="h-96 px-24 max-sm:px-0 py-6 flex gap-3">
+        <div
+          class="bg-[url('./Images/FC25full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative max-sm:hidden"
+        >
+          <p
+            class="relative z-10 text-white vazir font-semibold text-lg p-4 flex h-full items-end"
+          >
+            FC25 Prepares for October 2024 Release with Enhanced Realism
+          </p>
+        </div>
+        <div
+          class="flex flex-col max-sm:flex-row max-sm:overflow-x-scroll no-scrollbar no-scrollbar::-webkit-scrollbar w-full h-full gap-3 max-sm:justify-start"
+        >
+          <div class="flex h-1/2 w-full gap-3 max-sm:pl-10">
+            <div
+              class="bg-[url('./Images/game1full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full max-sm:min-w-52 border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative"
+            >
+              <p
+                class="relative z-10 text-white vazir font-medium text-sm px-3 py-1 flex h-full items-end"
+              >
+                GTA6 Prepares for November 2026 Release with Enhanced Realism
+              </p>
+            </div>
+            <div
+              class="bg-[url('./Images/game2full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full max-sm:min-w-52 border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative"
+            >
+              <p
+                class="relative z-10 text-white vazir font-medium text-sm px-3 py-1 flex h-full items-end"
+              >
+                The Witcher 4 Expected to Bring Back Fan-Favorite Characters
+              </p>
+            </div>
+            <div
+              class="bg-[url('./Images/game3full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full max-sm:min-w-52 border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative sm:hidden"
+            >
+              <p
+                class="relative z-10 text-white vazir font-medium text-sm px-3 py-1 flex h-full items-end"
+              >
+                Marvel’s Wolverine Set for an Epic 2025 Launch on PS5
+              </p>
+            </div>
+            <div
+              class="bg-[url('./Images/game4full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full max-sm:min-w-52 border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative sm:hidden"
+            >
+              <p
+                class="relative z-10 text-white vazir font-medium text-sm px-3 py-1 flex h-full items-end"
+              >
+                Star Wars Outlaws Combines Open-World Action and Storytelling
+              </p>
+            </div>
+          </div>
+          <div class="flex h-1/2 w-full gap-3 max-sm:px-0 max-sm:hidden">
+            <div
+              class="bg-[url('./Images/game3full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full max-sm:min-w-52 border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative"
+            >
+              <p
+                class="relative z-10 text-white vazir font-medium text-sm px-3 py-1 flex h-full items-end"
+              >
+                Marvel’s Wolverine Set for an Epic 2025 Launch on PS5
+              </p>
+            </div>
+            <div
+              class="bg-[url('./Images/game4full.jpg')] bg-cover bg-center bg-no-repeat cursor-pointer h-full w-full max-sm:min-w-52 border border-transparent rounded-xl before:content-[''] before:absolute before:inset-0 before:bg-[rgba(0,0,0,0.3)] before:rounded-xl before:z-0 relative"
+            >
+              <p
+                class="relative z-10 text-white vazir font-medium text-sm px-3 py-1 flex h-full items-end"
+              >
+                Star Wars Outlaws Combines Open-World Action and Storytelling
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-3 justify-center max-sm:hidden">
+        <img src="./Images/orangedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+        <img src="./Images/whitedot.svg" class="cursor-pointer" alt="" />
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="mt-16 max-sm:mt-4">
+      <div
+        class="flex flex-wrap bg-[url('./Images/subbg.png')] bg-cover bg-center bg-no-repeat px-24 max-sm:px-10 pt-10 pb-6 gap-16"
+      >
+        <div class="flex flex-col gap-6 w-80">
+          <img src="./Images/mainlogo.svg" class="w-36" alt="" />
+          <p class="vazir text-sm text-[#888888]">
+            Step into the future of gaming with eGame Store. Explore top-tierF
+            reviews, news, and in-depth analysis on the latest and greatest
+            games. Join the gaming community now to get exclusive content and
+            features.
+          </p>
+          <ul class="flex justify-evenly items-center">
+            <li>
+              <img
+                src="./Images/fb.svg"
+                class="w-5 h-5 cursor-pointer"
+                alt=""
+              />
+            </li>
+            <li>
+              <img
+                src="./Images/ig.svg"
+                class="w-5 h-5 cursor-pointer"
+                alt=""
+              />
+            </li>
+            <li>
+              <img src="./Images/x.svg" class="w-4 h-4 cursor-pointer" alt="" />
+            </li>
+            <li>
+              <img
+                src="./Images/yt.svg"
+                class="w-6 h-6 cursor-pointer"
+                alt=""
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-wrap gap-16">
+            <ul class="flex flex-col text-[#888888] text-xs vazir gap-6">
+              <li class="font-semibold text-lg text-[#FF6916]">Quick Links</li>
+              <li class="cursor-pointer">Home</li>
+              <li class="cursor-pointer">Gift Cards</li>
+              <li class="cursor-pointer">Deals</li>
+              <li class="cursor-pointer">Blog</li>
+            </ul>
+            <ul class="flex flex-col text-[#888888] text-xs vazir gap-6">
+              <li class="font-semibold text-lg text-[#FF6916]">Resources</li>
+              <li class="cursor-pointer">Trending games</li>
+              <li class="cursor-pointer">Upcoming Games</li>
+              <li class="cursor-pointer">Reviews</li>
+              <li class="cursor-pointer">FAQ</li>
+            </ul>
+            <ul class="flex flex-col text-[#888888] text-xs vazir gap-6">
+              <li class="font-semibold text-lg text-[#FF6916]">Explore</li>
+              <li class="cursor-pointer">PC Games</li>
+              <li class="cursor-pointer">PlayStation</li>
+              <li class="cursor-pointer">Nintendo</li>
+              <li class="cursor-pointer">Xbox</li>
+            </ul>
+            <ul class="flex flex-col text-[#888888] text-xs vazir gap-6">
+              <li class="font-semibold text-lg text-[#FF6916]">Contact Us</li>
+              <li class="flex items-center cursor-pointer">
+                <img src="./Images/location.svg" alt="" />
+                <p>00000000000</p>
+              </li>
+              <li class="flex items-center cursor-pointer">
+                <img src="./Images/call.svg" alt="" />
+                <p>00000000000</p>
+              </li>
+              <li class="flex items-center cursor-pointer">
+                <img src="./Images/mail.svg" alt="" />
+                <p>Egamestore@Gmail.com</p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-[#888888] text-xs vazir gap-6">
+              © 2025 EGameStore.com — All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
