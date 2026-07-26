@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Google Sans Flex", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
+        background-color: rgb(248, 250, 253);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.3%;
+        max-width: 100vw;
+        height: auto;
+      }
+      .lane {
+        display: flex;
+        flex: 16%;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        padding: 0px 0.3%;
+        max-width: 100vw;
+        height: auto;
+      }
+      .lanetwo {
+        display: flex;
+        flex: 20%;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        padding: 0 0.3%;
+        max-width: 100vw;
+        height: auto;
+      }
+      .circular-icon-container,
+      .fa-question-circle,
+      .fa-gear,
+      .layer-group,
+      .plus {
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .circular-icon-container:hover,
+      .fa-question-circle:hover,
+      .fa-gear:hover,
+      .layer-group:hover,
+      .plus:hover {
+        background-color: #e0e0e0;
+      }
+
+      .userface {
+        background-color: rgba(91, 15, 15, 0.822);
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        font-size: medium;
+        margin: 1.2vw 0.5vw;
+      }
+
+      .fa-bars,
+      .fa-question-circle,
+      .fa-gear,
+      .layer-group {
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 120%;
+        color: #565656;
+      }
+
+      .gmailenvelope {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+      .heading,
+      .plus {
+        padding: 1rem 0.5rem;
+        text-align: center;
+        font-size: 150%;
+        cursor: pointer;
+      }
+      .heading {
+        color: #5f5f5f;
+      }
+
+      .search-container {
+        position: relative;
+        display: flex;
+        flex: 64%;
+        justify-content: start;
+        height: auto;
+      }
+      .search-input {
+        position: relative;
+        padding-left: 6%;
+        width: 86%;
+        height: 7vh;
+        border: none;
+        border-radius: 50px;
+        background-color: #e9eef6;
+        transition: 0.3s;
+        font-size: medium;
+        color: #555;
+      }
+
+      .search-input:focus {
+        background-color: #ffffff;
+        outline: none;
+        border: 0.2px solid #f1f1f1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 3px 10px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      .briefcase {
+        position: absolute;
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%);
+        color: #888; /* Icon color */
+        cursor: pointer;
+        padding: 1%;
+        display: flex;
+        align-items: center;
+      }
+      .search-icon {
+        position: absolute;
+        z-index: 1000;
+        top: 50%;
+        left: 1.4%;
+        transform: translateY(-53%);
+        color: #555; /* Icon color */
+        cursor: pointer;
+        padding: 1%;
+      }
+      .search-icon:hover,
+      .briefcase:hover {
+        background-color: #d8e1ed;
+        border-radius: 50%;
+      }
+      .setting {
+        display: flex;
+      }
+      .navbars {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+      .compose {
+        display: inline-block;
+        font-weight: 500;
+        width: 70%;
+        font-size: small;
+        padding: 1.2rem 1.8rem 1.1rem 1.2rem;
+        background-color: #c2e7ff;
+        border: none;
+        border-radius: 1vw;
+        margin: 1rem 1.5rem 0 1rem;
+        cursor: pointer;
+      }
+      .aligncompose {
+        display: flex;
+        width: 110%;
+        justify-content: space-between;
+      }
+      .compose:hover {
+        box-shadow: 0 2px 5px 0 rgba(87, 87, 87, 0.2),
+          0 3px 5px 0 rgba(100, 99, 99, 0.19);
+      }
+      .compose div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .compose i {
+        font-size: large;
+      }
+
+      ul.navs {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        width: 30%;
+      }
+      ul.navs li {
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        width: 95%;
+        border-bottom-right-radius: 1vw;
+        border-top-right-radius: 1vw;
+        height: 5vh;
+      }
+
+      ul.navs li:hover {
+        background-color: rgb(224, 224, 224);
+      }
+
+      ul.navs li:first-child {
+        background-color: #d3e3fd;
+      }
+      .one {
+        flex: 30%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: start;
+        padding: 0.3% 6% 0.3% 6%;
+        font-size: medium;
+      }
+      .one i img {
+        padding-left: 25%;
+      }
+      .two {
+        flex: 70%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        font-size: small;
+        padding: 0.3% 5%;
+      }
+      .label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12%;
+        font-weight: 500;
+        font-size: medium;
+        cursor: default;
+        color: #444;
+      }
+      .upgrade {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5% 10%;
+        margin: 0 10%;
+        margin-top: 60%;
+        margin-bottom: 0;
+        border-radius: 3vw;
+        font-size: small;
+        cursor: pointer;
+      }
+      .upgrade:hover {
+        /* border: 1px solid grey;
+        padding: 7px 9px; */
+        background-color: rgb(229, 232, 236);
+        box-shadow: 0 2px 3px 0 rgba(87, 87, 87, 0.4),
+          0 3px 4px 0 rgba(100, 99, 99, 0.29);
+      }
+      .incircle {
+        flex: 15%;
+        font-size: medium;
+        font-weight: 900;
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        padding: 0 0.3%;
+      }
+      .upgradetext {
+        flex: 65%;
+        padding: 0 1%;
+      }
+      .upgradearrow {
+        flex: 20%;
+      }
+      .siding {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sides {
+        padding: 7px 20px 16px 16px;
+        font-size: 16px;
+      }
+      .sides i {
+        padding: 10px 5px 10px 10px;
+        transform: translateX(2px);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+      }
+      .sides i:hover {
+        background-color: rgb(224, 224, 224);
+      }
+      .sign {
+        display: inline-block;
+        font-size: 30px;
+        font-weight: 300;
+        text-align: center;
+        padding: 1px 10px;
+        border-radius: 50%;
+        margin: 28px 0px 0px 19px;
+        cursor: pointer;
+      }
+      .sign:hover {
+        background-color: rgb(224, 224, 224);
+      }
+
+      .nextpage {
+        text-align: center;
+        margin-top: 210px;
+        margin-left: 20px;
+        margin-right: 5px;
+        border-radius: 50%;
+        padding: 10px 0px;
+        font-size: small;
+        cursor: pointer;
+        font-size: small;
+      }
+      .nextpage:hover {
+        background-color: #eaeff0;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .my-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+
+        width: 15px;
+        height: 15px;
+        top: 5px;
+
+        border: 2px solid #555;
+
+        border-radius: 2px;
+        background: #fff;
+        cursor: pointer;
+
+        position: relative;
+      }
+
+      /* Hover effect */
+      .my-checkbox:hover {
+        background: rgb(224, 224, 224);
+      }
+
+      .my-checkbox:checked {
+        background-color: white;
+        border-color: #555;
+      }
+
+      /* checkmark */
+      .my-checkbox:checked::after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        /* top: 1px; */
+
+        width: 2px;
+        height: 8px;
+
+        border: solid #555;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      .sqrrr {
+        position: relative;
+        padding: 7px 3px 7px 4px;
+        border-radius: 3px;
+        cursor: pointer;
+        align-items: end;
+      }
+      .sqrrr:hover {
+        background-color: rgb(224, 224, 224);
+      }
+      .sqrrr:hover .my-checkboxone {
+        background: rgb(224, 224, 224);
+      }
+      .my-checkboxone {
+        transform: translateX(1.5px);
+      }
+      .arrr,
+      .arrrr {
+        padding: 12px 4px 8px 4px;
+        border-radius: 3px;
+        font-size: 10px;
+        cursor: pointer;
+      }
+      .arrr:hover {
+        background-color: rgb(224, 224, 224);
+      }
+      .rrrr {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        font-size: small;
+        text-align: center;
+        cursor: pointer;
+        transform: translateY(-1px);
+      }
+      .rrrr:hover {
+        background-color: rgb(224, 224, 224);
+      }
+      .fixed {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 10px 10px 0px 10px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+      .rightfix {
+        display: flex;
+      }
+      .content {
+        height: 2000px;
+        max-height: 37vw;
+        overflow-y: scroll;
+      }
+      .pagestext {
+        box-sizing: border-box;
+        font-size: 12px;
+        color: #888;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      .pagestext:hover {
+        border: 1px solid #888;
+        padding: 9px 19px;
+        border-radius: 3px;
+        background-color: rgb(224, 224, 224);
+      }
+      ul.prime {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+      }
+      ul.prime li {
+        float: left;
+        width: 25%;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      ul.prime li a {
+        display: block;
+        color: rgb(108, 108, 108);
+        padding: 14px;
+        text-decoration: none;
+        border-bottom: 5px solid white;
+      }
+      ul.prime li a:hover {
+        background-color: rgb(224, 224, 224);
+        border-bottom: 5px solid rgb(224, 224, 224);
+      }
+      .primeflex {
+        display: flex;
+        justify-content: start;
+      }
+      .primeimg {
+        flex: 15%;
+      }
+      .primetext {
+        flex: 85%;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f7f7f7;
+      }
+
+      ::-webkit-scrollbar-track:hover {
+        background: #e3e1e1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #c4c2c2;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7b7b7b;
+      }
+      .mailone {
+        display: flex;
+        height: 6vh;
+        align-items: center;
+        padding: 10px;
+        background-color: #f2f6fc;
+        cursor: pointer;
+        border: 0.1px solid #ebebeb;
+      }
+      .mailone:hover {
+        border: 0.1px solid #d1d1d1;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 3px 10px 0 rgba(0, 0, 0, 0.19);
+      }
+      .mailtitle {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex: 20%;
+        width: 20%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        font-weight: 400;
+      }
+      .my-checkboxtwo {
+        transform: translateY(-2.5px);
+        transition: background 0.4s ease-in-out 1ms;
+        background-color: #f2f6fc;
+        border-color: #9f9f9f;
+      }
+      .mailsqrrr {
+        padding: 3px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.4s ease-in-out 1ms;
+        color: #9f9f9f;
+      }
+      .mailsqrrr:hover {
+        background-color: rgb(213, 225, 232);
+      }
+      .mailsqrrr:hover .my-checkboxtwo {
+        background: rgb(213, 225, 232);
+      }
+      .mailone:hover .mailsqrrr {
+        color: #333;
+      }
+      .mailone:hover .my-checkboxtwo {
+        border-color: #333;
+      }
+      .mailsqrrrstar {
+        padding: 7px 5px;
+      }
+      .chattitle {
+        padding: 10px;
+      }
+      .mailchat {
+        display: flex;
+        flex: 70%;
+        width: 70%;
+        align-items: center;
+        justify-content: start;
+      }
+      .chat {
+        white-space: nowrap;
+        width: 750px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .endmsg {
+        display: flex;
+        flex: 10%;
+        width: 10%;
+        justify-content: end;
+        align-items: center;
+      }
+      .mailone:hover .chat {
+        width: 400px;
+      }
+      .bold {
+        color: #333;
+        font-size: 14px;
+      }
+      .light {
+        color: #767676;
+        font-size: medium;
+        font-size: 14px;
+      }
+      .date {
+        color: #767676;
+        font-size: 12px;
+      }
+      .mailone:hover .date {
+        display: none;
+      }
+      .otherwise {
+        display: none;
+        font-size: small;
+        align-items: center;
+      }
+      .mailone:hover .otherwise {
+        display: inline-flex;
+      }
+      .unsub {
+        padding: 2px 5px;
+        border: 1px solid #7b7b7b;
+        border-radius: 5px;
+        color: #6d6d6d;
+        margin: 5px;
+      }
+      .unsub:hover {
+        background-color: #d3e1e2;
+      }
+      .archisigns {
+        padding: 12px;
+      }
+      .archisigns:hover {
+        border-radius: 50%;
+        background-color: #dee7e7;
+      }
+      .last {
+        display: flex;
+        overflow: hidden;
+        height: 70px;
+        align-items: center;
+      }
+      .gb {
+        display: flex;
+        flex: 45%;
+        align-items: end;
+        font-size: x-small;
+        padding: 20px;
+      }
+      .fortyfour {
+        margin: 6px 0px;
+      }
+      .rng input[type="range"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: transparent;
+        width: 150%;
+        border-radius: 5px;
+        outline: none;
+        margin-top: 20px;
+      }
+      progress {
+        width: 200%;
+        height: 6px;
+        appearance: none;
+      }
+
+      progress::-webkit-progress-bar {
+        background-color: #c8c8c8;
+        border-radius: 5px;
+      }
+
+      progress::-webkit-progress-value {
+        background-color: grey;
+        border-radius: 5px;
+      }
+
+      .gb a {
+        text-decoration: none;
+        color: #333;
+      }
+      .gb a:hover {
+        text-decoration: underline;
+      }
+      ul.footer,
+      span.foot {
+        display: flex;
+        flex: 10%;
+        list-style: none;
+        justify-content: center;
+      }
+      ul.footer li,
+      span.foot {
+        text-decoration: none;
+        cursor: pointer;
+        padding: 10px 0px 30px 0px;
+      }
+      ul.footer li a,
+      span.foot {
+        text-decoration: none;
+        color: #888;
+        font-size: 11px;
+      }
+      ul.footer li:hover {
+        text-decoration: underline;
+        color: #6d6d6d;
+      }
+      .activity {
+        display: flex;
+        flex: 45%;
+        flex-direction: column;
+        font-size: x-small;
+        align-items: end;
+        justify-content: center;
+        color: #888;
+        padding: 20px;
+      }
+      @media screen and (min-width: 600px) and (max-width: 800px) {
+        .body {
+          overflow: visible;
+        }
+        .fixed {
+          font-size: xx-small;
+        }
+        .primetext {
+          font-size: xx-small;
+        }
+        .primeimg {
+          transform: scale(0.5);
+        }
+        .main {
+          flex-wrap: nowrap;
+          overflow-y: visible;
+        }
+        .mailtitle,
+        .mailchat,
+        .mailone,
+        .mailsqrrr,
+        .bold,
+        .light,
+        .endmsg,
+        .date,
+        .pagestext,
+        .arrr,
+        .rrrr {
+          font-size: xx-small;
+          padding: 0;
+        }
+        input[type="checkbox"] {
+          transform: scale(0.75);
+        }
+        i {
+          transform: scale(0.8);
+        }
+      }
+      @media screen and (min-width: 450px) and (max-width: 599px) {
+        .fixed {
+          font-size: 1%;
+        }
+        .search-icon {
+          transform: scale(0.8);
+          top: 25%;
+          left: 0.2%;
+        }
+        .primetext {
+          font-size: 8px;
+        }
+        .primeimg {
+          transform: scale(0.5);
+        }
+        .main {
+          flex-wrap: nowrap;
+          overflow: auto;
+          scroll-behavior: smooth;
+        }
+        .mailtitle,
+        .mailchat,
+        .mailone,
+        .mailsqrrr,
+        .bold,
+        .light,
+        .endmsg,
+        .date,
+        .pagestext,
+        .arrr,
+        .rrrr {
+          font-size: 6px;
+          padding: 0;
+        }
+        input[type="checkbox"] {
+          transform: scale(0.5);
+        }
+        i {
+          transform: scale(0.6);
+        }
+      }
+      @media screen and (min-width: 100px) and (max-width: 449px) {
+        .fixed {
+          display: none;
+        }
+        .search-icon {
+          display: none;
+        }
+        .briefcase {
+          display: none;
+        }
+
+        .search-input {
+          font-size: small;
+          color: transparent;
+        }
+        .heading,
+        .plus,
+        .gmailenvelope {
+          transform: scale(0.6);
+          padding: 0;
+          float: left;
+        }
+        .primetext {
+          font-size: 3.5px;
+        }
+        .primeimg {
+          display: none;
+        }
+        .prime {
+          display: flex;
+        }
+        .main {
+          flex-wrap: nowrap;
+          overflow-y: auto;
+          scroll-behavior: smooth;
+        }
+        .mailtitle,
+        .mailchat,
+        .mailone,
+        .mailsqrrr,
+        .bold,
+        .light,
+        .endmsg,
+        .date,
+        .pagestext,
+        .arrr,
+        .rrrr {
+          font-size: 2px;
+          padding: 0;
+        }
+        input[type="checkbox"] {
+          transform: scale(0.25);
+        }
+        i {
+          transform: scale(0.4);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header class="head">
+        <div class="lane">
+          <div class="circular-icon-container">
+            <i class="fa-solid fa-bars" title="Main menu"></i>
+          </div>
+          <span title="Gmail">
+            <?xml version="1.0" encoding="utf-8"?>
+
+            <svg
+              height="2.6rem"
+              width="2.6rem"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="gmailenvelope"
+            >
+              <path
+                d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z"
+                fill="white"
+              />
+              <path
+                d="M22.0515 8.52295L16.0644 13.1954L9.94043 8.52295V8.52421L9.94783 8.53053V15.0732L15.9954 19.8466L22.0515 15.2575V8.52295Z"
+                fill="#EA4335"
+              />
+              <path
+                d="M23.6231 7.38639L22.0508 8.52292V15.2575L26.9983 11.459V9.17074C26.9983 9.17074 26.3978 5.90258 23.6231 7.38639Z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M22.0508 15.2575V23.9924H25.8428C25.8428 23.9924 26.9219 23.8813 26.9995 22.6513V11.459L22.0508 15.2575Z"
+                fill="#34A853"
+              />
+              <path
+                d="M9.94811 24.0001V15.0732L9.94043 15.0669L9.94811 24.0001Z"
+                fill="#C5221F"
+              />
+              <path
+                d="M9.94014 8.52404L8.37646 7.39382C5.60179 5.91001 5 9.17692 5 9.17692V11.4651L9.94014 15.0667V8.52404Z"
+                fill="#C5221F"
+              />
+              <path
+                d="M9.94043 8.52441V15.0671L9.94811 15.0734V8.53073L9.94043 8.52441Z"
+                fill="#C5221F"
+              />
+              <path
+                d="M5 11.4668V22.6591C5.07646 23.8904 6.15673 24.0003 6.15673 24.0003H9.94877L9.94014 15.0671L5 11.4668Z"
+                fill="#4285F4"
+              />
+            </svg>
+          </span>
+          <span class="heading" title="Gmail">Gmail</span>
+        </div>
+        <div class="search-container">
+          <i class="fas fa-search search-icon" title="Search"></i>
+          <input type="text" placeholder="Search mail" class="search-input" />
+
+          <span class="briefcase">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z"
+              ></path>
+            </svg>
+          </span>
+        </div>
+        <div class="lanetwo">
+          <i class="far fa-question-circle" title="Support"></i>
+          <i class="fa-solid fa-gear" title="Settings"></i>
+
+          <i class="layer-group"
+            ><img src="images/al-icon.png" alt="more" title="More apps"
+          /></i>
+          <span class="userface" title="Google account abcxyz123@gmail.com"
+            >R</span
+          >
+        </div>
+      </header>
+      <div class="setting">
+        <nav class="nav-bars">
+          <div class="compose">
+            <div class="aligncompose">
+              <div><i class="fa-solid fa-pen"></i></div>
+              <div><span>Compose</span></div>
+            </div>
+          </div>
+          <ul class="navs">
+            <li>
+              <div class="one"><i class="fa-regular fa-image"></i></div>
+              <div class="two" style="font-weight: 650" title="Inbox">
+                Inbox
+              </div>
+            </li>
+            <li>
+              <div class="one">
+                <i class="fa-regular fa-star" title="Starred"></i>
+              </div>
+              <div class="two">Starred</div>
+            </li>
+            <li>
+              <div class="one">
+                <i class="fa-regular fa-clock" title="Snoozed"></i>
+              </div>
+              <div class="two">Snoozed</div>
+            </li>
+            <li>
+              <div class="one">
+                <i
+                  ><img
+                    src="images/send_baseline_nv700_20dp.png"
+                    title="Sent"
+                    alt="sent"
+                    width="20"
+                    height="20"
+                /></i>
+              </div>
+              <div class="two">Sent</div>
+            </li>
+            <li>
+              <div class="one">
+                <i class="fa-regular fa-file" title="Drafts"></i>
+              </div>
+              <div class="two">Drafts</div>
+            </li>
+            <li>
+              <div class="one">
+                <i class="fa-regular fa-clipboard" title="Purchases"></i>
+              </div>
+              <div class="two">Purchases</div>
+            </li>
+            <li>
+              <div class="one"><i class="fa-solid fa-angle-down"></i></div>
+              <div class="two">More</div>
+            </li>
+          </ul>
+          <div class="label">
+            <span>Labels</span
+            ><span
+              class="plus"
+              style="font-weight: 400"
+              title="Create new label"
+              >+</span
+            >
+          </div>
+          <div class="upgrade">
+            <div class="incircle">①</div>
+            <div class="upgradetext">Upgrade</div>
+            <div><i class="fa-solid fa-arrow-right upgradearrow"></i></div>
+          </div>
+        </nav>
+        <div class="main">
+          <div class="fixed">
+            <div class="left-fix">
+              <span class="sqrrr">
+                <input type="checkbox" class="my-checkbox my-checkboxone" />
+              </span>
+              <i class="fa-solid fa-caret-down arrr" title="Select"></i>
+              <i class="fas fa-redo rrrr" title="Refresh"></i>
+              <i class="fa-solid fa-ellipsis-vertical rrrr"></i>
+            </div>
+            <div class="right-fix">
+              <span class="pagestext">1-14 of 14</span>
+              <i
+                class="fa-solid fa-angle-left arrrr"
+                style="cursor: default"
+                title="Newer"
+              ></i>
+              <i
+                class="fa-solid fa-angle-right arrrr"
+                style="cursor: default"
+                title="Older"
+              ></i>
+              <i
+                class="fa-solid fa-keyboard sqrrr"
+                title="Input tools on/off"
+              ></i>
+
+              <i
+                class="fa-solid fa-caret-down arrr"
+                title="Select input tools"
+              ></i>
+            </div>
+          </div>
+          <div class="content">
+            <ul class="prime">
+              <li>
+                <a
+                  href="#primary"
+                  style="
+                    color: rgb(69, 69, 250);
+                    border-bottom: 5px solid rgb(69, 69, 250);
+                  "
+                  ><span class="primeflex">
+                    <span class="primeimg"
+                      ><i class="fa-regular fa-image"></i></span
+                    ><span class="primetext">Primary</span></span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#promotion"
+                  ><span class="primeflex"
+                    ><span class="primeimg"
+                      ><i class="fa-solid fa-tags"></i></span
+                    ><span class="primetext">Promotion</span></span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#social"
+                  ><span class="primeflex"
+                    ><span class="primeimg"
+                      ><i class="fa-solid fa-people-group"></i></span
+                    ><span class="primetext">Social</span></span
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#updates"
+                  ><span class="primeflex"
+                    ><span class="primeimg"
+                      ><i class="fa-solid fa-circle-info"></i></span
+                    ><span class="primetext">Updates</span></span
+                  ></a
+                >
+              </li>
+            </ul>
+            <div class="mails">
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">ChatGPT</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Ask anything - really </span>
+                    <span class="light"> - Start with any question. </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Nov 13</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Windows device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Nov 10</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold"
+                      >Help strengthen the security of your Google Account
+                    </span>
+                    <span class="light">
+                      - Add a recovery email for abcxyz123@gmail.com so that you
+                      are safe
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Oct 28</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - A new sign-in to your Google Account on a Windows
+                      device. If this was you, you don’t need to do anything. If
+                      not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Oct 25</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold"
+                      >✅ Romeo, finish setting up your iPhone device with the
+                      latest Google apps
+                    </span>
+                    <span class="light">
+                      - Finish set-up your Google Account on a this device. If
+                      this was you, you don’t need to do anything. If not, we’ll
+                      help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Oct 12</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub"
+                        >Review activity
+                        <i
+                          class="fa-solid fa-arrow-trend-up"
+                          style="font-size: x-small"
+                        ></i
+                      ></span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Apple iPhone X device. If this was you, you don’t need to
+                      do anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Oct 5</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold"
+                      >✅ Romeo, finish setting up your iPhone device with the
+                      latest Google apps
+                    </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Windows device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Sep 24</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub"
+                        >Review activity
+                        <i
+                          class="fa-solid fa-arrow-trend-up"
+                          style="font-size: x-small"
+                        ></i
+                      ></span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">
+                    Google
+                    <span style="font-size: small; color: #7f7f7f">2</span>
+                  </div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - a new sign-in to your Google Account on a Apple iPhone
+                      16 Pro device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Sep 15</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Windows device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Sep 2</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Windows device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Aug 23</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google Gemini</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold"> Important updates in Gemini Apps </span>
+                    <span class="light">
+                      - Introducing temporary chats and new data controls To
+                      help you manage and remain in control of your data, we are
+                      introducing a new our account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Aug 14</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Windows device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Aug 3</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold">Security Alert </span>
+                    <span class="light">
+                      - We noticed a new sign-in to your Google Account on a
+                      Windows device. If this was you, you don’t need to do
+                      anything. If not, we’ll help you secure your account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">Aug 1</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google Gemini</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold"> Welcome to Gemini </span>
+                    <span class="light">
+                      - Meet Gemini, your new AI assistant With Gemini as the
+                      new primary assistant on your Android device, you can get
+                      help writing, learning, creating, and getting more
+                      done—even with complex tasks. Go hands-free and have a
+                      natural, free-flowing voice conversation with Geminre your
+                      account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">July 21</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ********************************************************** -->
+
+              <div class="mailone">
+                <div class="mailtitle">
+                  <span class="mailsqrrr" title="Select">
+                    <input type="checkbox" class="my-checkbox my-checkboxtwo" />
+                  </span>
+                  <i
+                    class="fa-regular fa-star mailsqrrr mailsqrrrstar"
+                    title="Not starred"
+                  ></i>
+                  <div class="chattitle">Google Gemini</div>
+                </div>
+                <div class="mailchat">
+                  <div class="chat">
+                    <span class="bold"> Welcome to Gemini </span>
+                    <span class="light">
+                      - Meet Gemini, your new AI assistant With Gemini as the
+                      new primary assistant on your Android device, you can get
+                      help writing, learning, creating, and getting more
+                      done—even with complex tasks. Go hands-free and have a
+                      natural, free-flowing voice conversation with Geminre your
+                      account.
+                    </span>
+                  </div>
+                  <div class="endmsg">
+                    <div class="date">July 21</div>
+                    <div class="otherwise">
+                      <i
+                        class="fa-solid fa-ellipsis"
+                        style="font-size: x-small"
+                      ></i>
+                      <span class="unsub">Unsubscribe</span>
+                      <i class="fas fa-archive archisigns" title="Archive"></i>
+                      <i
+                        class="fa-solid fa-trash archisigns"
+                        title="Delete"
+                      ></i>
+                      <i
+                        class="fa-solid fa-envelope-circle-check archisigns"
+                        title="Mark as read"
+                      ></i>
+                      <i
+                        class="fa-regular fa-clock archisigns"
+                        title="Snooze"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ********************************************************** -->
+
+              <div class="last">
+                <div class="gb">
+                  <a href="#"
+                    ><div class="rng">
+                      <!-- <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="44"
+                        id="progress-slider"
+                      /> -->
+                      <progress value="40" max="100"></progress>
+                    </div>
+
+                    <div class="fortyfour">44% of 15GB used</div></a
+                  >
+                </div>
+                <ul class="footer">
+                  <li><a href="T">Terms</a></li>
+                  <span class="foot">.</span>
+                  <li><a href="P">Privacy</a></li>
+                  <span class="foot">.</span>
+                  <li><a href="Pr">Policies</a></li>
+                </ul>
+                <div class="activity">
+                  <div>Last account activity 34 minutes ago</div>
+                  <div>Details</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <ul class="siding">
+            <li class="sides">
+              <i
+                ><img
+                  src="images/calendar_2020q4_2x.png"
+                  alt="calendar"
+                  title="Calendar"
+                  width="20"
+                  height="20"
+              /></i>
+            </li>
+            <li class="sides">
+              <i
+                ><img
+                  src="images/keep_2020q4v3_2x.png"
+                  alt="keep"
+                  title="Keep"
+                  width="20"
+                  height="20"
+              /></i>
+            </li>
+            <li class="sides">
+              <i
+                ><img
+                  src="images/tasks_2021_2x.png"
+                  alt="tasks"
+                  title="Tasks"
+                  width="20"
+                  height="20"
+              /></i>
+            </li>
+            <li class="sides">
+              <i
+                ><img
+                  src="images/contacts_2022_2x.png"
+                  alt="contacts"
+                  title="Contacts"
+                  width="20"
+                  height="20"
+              /></i>
+            </li>
+          </ul>
+          <div class="sign" title="Get add ons">+</div>
+          <div class="nextpage">
+            <i class="fa-solid fa-angle-right" title="Hide side panel"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

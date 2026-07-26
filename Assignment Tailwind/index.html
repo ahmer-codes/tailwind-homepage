@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>E-Commerce HomePage</title>
+  </head>
+  <body>
+    <div
+      class="flex justify-evenly bg-black py-3 text-sm text-white max-md:text-[10px] max-sm:py-1 max-sm:text-[5px]"
+    >
+      <div></div>
+      <div class="flex justify-center">
+        <p class="px-1 font-light">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
+        </p>
+        <a href="#" class="px-1 font-bold underline">ShopNow</a>
+      </div>
+      <div class="justify-end">
+        <select name="Lang" id="Lang">
+          <option value="English">English</option>
+        </select>
+      </div>
+    </div>
+    <header
+      class="flex items-center justify-around px-8 pt-10 pb-3 max-sm:px-2 max-sm:pt-3"
+    >
+      <h1 class="text-3xl font-bold tracking-wide max-sm:text-lg">Exclusive</h1>
+      <ul class="flex max-[400px]:hidden">
+        <li
+          class="max-md::px-2 px-6 underline decoration-gray-400 underline-offset-6 max-md:text-[10px] max-sm:text-[5px] py-2 hover:bg-gray-100 cursor-pointer rounded-lg"
+        >
+          Home
+        </li>
+        <li
+          class="px-6 max-md:px-2 max-md:text-[10px] max-sm:text-[5px] cursor-pointer py-2 hover:bg-gray-100 rounded-lg"
+        >
+          Contact
+        </li>
+        <li
+          class="px-6 max-md:px-2 max-md:text-[10px] max-sm:text-[5px] cursor-pointer py-2 hover:bg-gray-100 rounded-lg"
+        >
+          About
+        </li>
+        <li
+          class="px-6 max-md:px-2 max-md:text-[10px] max-sm:text-[5px] cursor-pointer py-2 hover:bg-gray-100 rounded-lg"
+        >
+          Sign Up
+        </li>
+      </ul>
+      <div class="flex items-center">
+        <input
+          type="search"
+          placeholder="What are you looking for?"
+          class="relative mx-2 h-10 w-full appearance-none rounded bg-[#f5f5f5] bg-[url(/Images/Vector.svg)] bg-no-repeat bg-[position:right_10px_center] pr-8 pl-4 leading-normal placeholder:text-sm max-md:h-7 max-md:placeholder:text-[10px] max-sm:hidden"
+        />
+        <!-- 
+        <img
+          src="/Images/Vector.svg"
+          class="absolute right-[16%] max-md:hidden cursor-pointer"
+          alt="search"
+        /> -->
+        <img
+          class="px-2 cursor-pointer"
+          src="/Images/Wishlist.svg"
+          alt="wishlist"
+        />
+        <img class="p-2 cursor-pointer" src="/Images/Cart1.svg" alt="cart" />
+      </div>
+    </header>
+    <hr class="text-gray-300" />
+    <section class="flex max-md:flex-col px-24 max-md:px-6">
+      <!-- Left Sidebar -->
+      <div class="flex w-80 max-md:w-full justify-between gap-6">
+        <ul
+          class="flex flex-col gap-4 max-md:flex-row max-md:flex-wrap max-md:justify-center max-md:text-xs pt-10"
+        >
+          <li
+            class="flex justify-between py-2 gap-6 hover:underline underline-offset-4"
+          >
+            <a href="#">Woman's Fashion</a>
+            <img
+              src="/Images/Vector2.svg"
+              class="max-md:hidden"
+              width="7"
+              alt=""
+            />
+          </li>
+          <li
+            class="flex justify-between py-2 gap-6 hover:underline underline-offset-4"
+          >
+            <a href="#">Men's Fashion</a>
+            <img
+              src="/Images/Vector2.svg"
+              class="max-md:hidden"
+              width="7"
+              alt=""
+            />
+          </li>
+          <li class="py-2 hover:underline underline-offset-4">
+            <a href="#">Electronics</a>
+          </li>
+          <li class="py-2 hover:underline underline-offset-4">
+            <a href="#">Home & Lifestyle</a>
+          </li>
+          <li class="py-2 hover:underline underline-offset-4">
+            <a href="#">Medicine</a>
+          </li>
+          <li class="py-2 hover:underline underline-offset-4">
+            <a href="#">Sports & Outdoor</a>
+          </li>
+          <li class="py-2 hover:underline underline-offset-4">
+            <a href="#">Baby’s & Toys</a>
+          </li>
+        </ul>
+
+        <div class="h-[385px] border-l border-gray-300 max-md:hidden"></div>
+      </div>
+
+      <div
+        class="mx-10 mt-10 max-md:mt-2 flex h-80 w-full flex-col bg-black bg-[url(/Images/hero_endframe.svg)] bg-no-repeat bg-right max-md:bg-center max-md:mx-0"
+      >
+        <div class="flex h-80 justify-between pl-10 max-md:pl-0 pt-10">
+          <div class="flex flex-col ml-10 max-sm:ml-5 justify-center gap-6">
+            <div class="flex items-center gap-6 max-sm:text-sm">
+              <img src="/Images/1200px-Apple_gray_logo.svg" alt="applelogo" />
+              <p class="font-light text-white max-sm:hidden">
+                iPhone 14 Series
+              </p>
+            </div>
+
+            <p
+              class="discount text-5xl max-sm:text-sm leading-14 font-semibold tracking-wider text-white"
+            >
+              Up to 10% <br />
+              off Voucher
+            </p>
+
+            <div class="flex cursor-pointer items-center gap-6 max-md:gap-0">
+              <p
+                class="text-white hover:text-purple-500 underline underline-offset-8"
+              >
+                Shop Now
+              </p>
+              <img src="/Images/vec.svg" alt="arrow" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="flex justify-center gap-3 bg-black py-3">
+          <img
+            src="/Images/Ellipse 7.svg"
+            width="12"
+            class="cursor-pointer"
+            alt=""
+          />
+          <img
+            src="/Images/Ellipse 7.svg"
+            width="12"
+            class="cursor-pointer"
+            alt=""
+          />
+          <img
+            src="/Images/Group 1000005940.svg"
+            class="cursor-pointer"
+            width="14"
+            alt=""
+          />
+          <img
+            src="/Images/Ellipse 7.svg"
+            width="12"
+            class="cursor-pointer"
+            alt=""
+          />
+          <img
+            src="/Images/Ellipse 7.svg"
+            width="12"
+            class="cursor-pointer"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="pt-36 pl-24 max-md:pl-10 pb-16">
+      <div class="flex items-center gap-4 font-bold text-[#db4444]">
+        <img src="/Images/Rectangle17.svg" alt="" />
+        <p>Today's</p>
+      </div>
+      <div class="flex items-end mr-24 pt-3 mb-3 justify-between">
+        <div
+          class="flex max-sm:flex-col max-sm:justify-center max-sm:items-center items-end justify-between w-1/2 max-md:w-full"
+        >
+          <p
+            class="discount text-4xl max-sm:text-lg font-semibold tracking-wide"
+          >
+            Flash Sales
+          </p>
+
+          <ul
+            class="flex items-center max-sm:justify-center max-[300px]:hidden max-sm:gap-1 gap-3"
+          >
+            <li>
+              <p class="text-xs font-semibold">Days</p>
+              <p
+                class="discount text-3xl max-sm:text-sm font-bold tracking-wider"
+              >
+                03
+              </p>
+            </li>
+            <li>
+              <p class="text-3xl max-sm:text-sm text-[#db4444]">:</p>
+            </li>
+            <li>
+              <p class="text-xs font-semibold">Hours</p>
+              <p
+                class="discount text-3xl max-sm:text-sm font-bold tracking-wider"
+              >
+                23
+              </p>
+            </li>
+            <li>
+              <p class="text-3xl max-sm:text-sm text-[#db4444]">:</p>
+            </li>
+            <li>
+              <p class="text-xs font-semibold">Minutes</p>
+              <p
+                class="discount text-3xl max-sm:text-sm font-bold tracking-widest"
+              >
+                19
+              </p>
+            </li>
+            <li>
+              <p class="text-3xl max-sm:text-sm text-[#db4444]">:</p>
+            </li>
+            <li>
+              <p class="text-xs font-semibold">Seconds</p>
+              <p
+                class="discount text-3xl max-sm:text-sm font-bold tracking-wider"
+              >
+                56
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="flex gap-3 max-md:hidden">
+          <div
+            class="p-3 bg-[#f5f5f5] hover:bg-[#e0e0e0] rounded-full cursor-pointer"
+          >
+            <img src="/Images/arroowwleft.svg" alt="arrowleft" />
+          </div>
+          <div
+            class="p-3 bg-[#f5f5f5] hover:bg-[#e0e0e0] rounded-full cursor-pointer"
+          >
+            <img src="/Images/arrowwrightt.svg" alt="arrowright" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-nowrap overflow-x-hidden shrink max-md:flex-wrap max-md:overflow-auto justify-center gap-6 pt-6"
+      >
+        <div>
+          <div class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] rounded">
+            <div class="flex p-4 items-center justify-between">
+              <p class="py-1.5 px-4 text-white text-xs bg-[#db4444] rounded-md">
+                -40%
+              </p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"><img src="Images/pic1.png" alt="pic" /></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">HAVIT HV-G92 Gamepad</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$120</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $160
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (75)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] rounded flex flex-col justify-between"
+          >
+            <div class="flex flex-col">
+              <div class="flex p-4 items-center justify-between">
+                <p
+                  class="py-1.5 px-4 text-white text-xs bg-[#db4444] rounded-md"
+                >
+                  -35%
+                </p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-44"><img src="Images/pic2.png" alt="pic" /></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-black hover:bg-[#333] text-white py-2 max-md:py-0.5 max-md:text-xs text-center cursor-pointer"
+            >
+              Add To Cart
+            </div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">AK-900 Wired Keyboard</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$960</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $1160
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/startnorate.svg"
+                  width="15"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (99)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] bg-[url(images/TV.png)] bg-contain bg-center rounded"
+          >
+            <div class="flex p-4 items-center justify-between">
+              <p class="py-1.5 px-4 text-white text-xs bg-[#db4444] rounded-md">
+                -30%
+              </p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">IPS LCD Gaming Monitor</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$370</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $400
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (88)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] bg-[url(images/chair.png)] bg-contain bg-center rounded"
+          >
+            <div class="flex p-4 items-center justify-between">
+              <p class="py-1.5 px-4 text-white text-xs bg-[#db4444] rounded-md">
+                -25%
+              </p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">S-Series Comfort Chair</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$375</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $400
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starthalf.svg"
+                  width="18"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (99)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="max-md:hidden">
+          <div
+            class="w-32 h-64 p-4 bg-[#f5f5f5] bg-[url(images/chair.png)] bg-cover bg-no-repeat bg-left rounded"
+          >
+            <p
+              class="text-center py-1.5 text-white text-xs bg-[#db4444] rounded-md"
+            >
+              -25%
+            </p>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">S-Series Comfor</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$375</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $400
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starthalf.svg"
+                  width="18"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-16">
+        <p
+          class="text-center w-56 text-white bg-[#db4444] hover:bg-[#c63636] rounded py-4 cursor-pointer"
+        >
+          View All Products
+        </p>
+      </div>
+    </section>
+    <div class="flex justify-center"><hr class="w-4/5 text-gray-300" /></div>
+    <section class="pt-20 px-24 max-md:px-10 pb-16">
+      <div class="flex mb-4 items-center gap-4 font-semibold text-[#db4444]">
+        <img src="/Images/Rectangle17.svg" alt="" />
+        <p>Categories</p>
+      </div>
+      <div class="flex items-end pt-3 mb-3 justify-between">
+        <div
+          class="flex max-sm:flex-col max-sm:justify-center max-sm:items-center items-end justify-between w-1/2 max-md:w-full"
+        >
+          <p
+            class="discount text-4xl max-sm:text-lg font-semibold tracking-wide"
+          >
+            Browse By Category
+          </p>
+        </div>
+        <div class="flex gap-3 max-md:hidden">
+          <div
+            class="p-3 bg-[#f5f5f5] hover:bg-[#ececec] rounded-full cursor-pointer"
+          >
+            <img src="/Images/arroowwleft.svg" alt="arrowleft" />
+          </div>
+          <div
+            class="p-3 bg-[#f5f5f5] hover:bg-[#ececec] rounded-full cursor-pointer"
+          >
+            <img src="/Images/arrowwrightt.svg" alt="arrowright" />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-wrap gap-9 mt-16 max-md:justify-center items-center"
+      >
+        <div>
+          <div
+            class="flex flex-col justify-center gap-4 items-center border border-gray-400 hover:bg-[#f5f5f5] rounded-lg w-40 h-36 cursor-pointer"
+          >
+            <img src="/Images/Category-CellPhone.svg" width="56" alt="" />
+            <p class="">Phones</p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col justify-center gap-4 items-center border border-gray-400 hover:bg-[#f5f5f5] rounded-lg w-40 h-36 cursor-pointer"
+          >
+            <img src="/Images/Category-Computer.svg" width="56" alt="" />
+            <p class="">Computers</p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col justify-center gap-4 items-center border border-gray-400 hover:bg-[#f5f5f5] rounded-lg w-40 h-36 cursor-pointer"
+          >
+            <img src="/Images/Category-SmartWatch.svg" width="56" alt="" />
+            <p class="">SmartWatch</p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col justify-center gap-4 items-center bg-[#db4444] hover:bg-[#c63636] border border-gray-400 rounded-lg w-40 h-36 cursor-pointer"
+          >
+            <img src="/Images/Category-Camera.svg" width="56" alt="" />
+            <p class="text-white">Camera</p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col justify-center gap-4 items-center border border-gray-400 hover:bg-[#f5f5f5] rounded-lg w-40 h-36 cursor-pointer"
+          >
+            <img src="/Images/Category-Headphone.svg" width="56" alt="" />
+            <p class="">Headphones</p>
+          </div>
+        </div>
+        <div>
+          <div
+            class="flex flex-col justify-center gap-4 items-center border border-gray-400 hover:bg-[#f5f5f5] rounded-lg w-40 h-36 cursor-pointer"
+          >
+            <img src="/Images/Category-Gamepad.svg" width="56" alt="" />
+            <p class="">Gaming</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex justify-center"><hr class="w-4/5 text-gray-300" /></div>
+    <section class="pt-20 px-24 max-md:px-10 pb-16">
+      <div class="flex items-center gap-4 font-semibold text-[#db4444]">
+        <img src="/Images/Rectangle17.svg" alt="" />
+        <p>This Month</p>
+      </div>
+      <div class="flex mb-3 mt-5 justify-between">
+        <div class="flex max-sm:shrink justify-between">
+          <p
+            class="discount text-4xl max-sm:text-lg font-semibold tracking-wide"
+          >
+            Best Selling Products
+          </p>
+        </div>
+        <div
+          class="bg-[#db4444] hover:bg-[#c63636] w-40 py-4 rounded-lg text-center text-[white] cursor-pointer"
+        >
+          View All
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-9 pt-6">
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] bg-[url(images/pinkjacket.png)] bg-[length:170px_170px] max-sm:bg-contain bg-no-repeat bg-center rounded"
+          >
+            <div class="flex p-4 items-center justify-between">
+              <p class=""></p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">The north coat</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$260</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $360
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (65)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] bg-[url(images/dufflebag.png)] bg-[length:180px_180px] max-sm:bg-contain bg-no-repeat bg-center rounded"
+          >
+            <div class="flex p-4 items-center justify-between">
+              <p class=""></p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">Gucci duffle bag</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$960</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $1160
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starthalf.svg"
+                  width="18"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (65)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] bg-[url(images/speakers.png)] bg-[length:200px_200px] max-sm:bg-contain bg-no-repeat bg-center rounded"
+          >
+            <div class="flex p-4 items-center justify-between">
+              <p class=""></p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">RGB liquid CPU Cooler</p>
+            <div class="flex gap-3 pt-1">
+              <p class="text-[#db4444]">$160</p>
+              <p
+                class="text-[#5f5f5f] line-through decoration-2 decoration-[#5f5f5f9a]"
+              >
+                $170
+              </p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starthalf.svg"
+                  width="18"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (65)
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="w-64 h-64 max-sm:w-32 max-sm:h-32 bg-[#f5f5f5] bg-[url(images/bookshelf.png)] bg-[length:300px_200px] max-sm:bg-contain bg-no-repeat bg-center rounded"
+          >
+            <div class="flex p-4 items-center justify-between">
+              <p class=""></p>
+              <div class="p-1 bg-white rounded-full cursor-pointer">
+                <img src="Images/Wishlist.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div class="flex justify-between px-4">
+              <div></div>
+              <div class="w-40"></div>
+              <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                <img src="Images/QuickeyeView.svg" width="25" alt="" />
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <div class="pt-3">
+            <p class="max-md:text-xs">Small BookSelf</p>
+            <div class="flex pt-1">
+              <p class="text-[#db4444]">$360</p>
+            </div>
+            <div class="flex pt-1 gap-6 text-sm">
+              <div class="flex gap-1">
+                <img src="/Images/starrate.svg" width="15" alt="" />
+                <img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                /><img src="/Images/starrate.svg" width="15" alt="" /><img
+                  src="/Images/starrate.svg"
+                  width="15"
+                  alt=""
+                />
+              </div>
+              <div class="font-semibold max-md:text-xs text-[#5f5f5f]">
+                (65)
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="pt-20 px-24 max-md:px-10 pb-16">
+      <div
+        class="flex items-center pl-16 bg-black w-full h-[500px] bg-[url(images/Ellipseonspeaker.png)] bg-contain bg-no-repeat bg-right"
+      >
+        <div class="flex flex-col gap-8">
+          <div><p class="text-[#00ff66] font-semibold">Categories</p></div>
+          <div>
+            <p
+              class="discount text-white tracking-wider leading-16 font-semibold text-5xl max-md:text-lg"
+            >
+              Enhance Your Music Experience
+            </p>
+          </div>
+          <div class="flex gap-4 max-md:hidden">
+            <div
+              class="bg-white rounded-full space-y-0 w-16 h-16 flex flex-col justify-center items-center"
+            >
+              <p class="font-semibold text-lg leading-none">23</p>
+              <p class="text-xs leading-none">Hours</p>
+            </div>
+            <div
+              class="bg-white rounded-full p-2 w-16 h-16 flex flex-col justify-center items-center"
+            >
+              <p class="font-semibold text-lg leading-none">05</p>
+              <p class="text-xs leading-none">Days</p>
+            </div>
+            <div
+              class="bg-white rounded-full p-2 w-16 h-16 flex flex-col justify-center items-center"
+            >
+              <p class="font-semibold text-lg leading-none">59</p>
+              <p class="text-xs leading-none">Minutes</p>
+            </div>
+            <div
+              class="bg-white rounded-full p-2 w-16 h-16 flex flex-col justify-center items-center"
+            >
+              <p class="font-semibold text-lg leading-none">35</p>
+              <p class="text-xs leading-none">Seconds</p>
+            </div>
+          </div>
+          <div
+            class="flex justify-center items-center w-44 max-md:w-20 h-14 shrink bg-[#00ff66] hover:bg-[#08d359] rounded-lg cursor-pointer"
+          >
+            <p class="text-white">Buy Now!</p>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/Images/boombox.png"
+            width="1200"
+            class="transform scale-x-[-1] shrink max-md:hidden"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <section class="pt-20 px-24 max-[1010px]:px-10 pb-16">
+      <div class="flex items-center gap-4 font-semibold text-[#db4444]">
+        <img src="/Images/Rectangle17.svg" alt="" />
+        <p>Our Products</p>
+      </div>
+      <div class="flex mb-3 mt-5 justify-between">
+        <div class="flex max-[720px]:shrink justify-between">
+          <p
+            class="discount text-4xl max-sm:text-lg font-semibold tracking-wide"
+          >
+            Explore Our Products
+          </p>
+        </div>
+        <div class="flex gap-3 max-[1010px]:hidden">
+          <div
+            class="p-3 bg-[#f5f5f5] hover:bg-[#ececec] rounded-full cursor-pointer"
+          >
+            <img src="/Images/arroowwleft.svg" alt="arrowleft" />
+          </div>
+          <div
+            class="p-3 bg-[#f5f5f5] hover:bg-[#ececec] rounded-full cursor-pointer"
+          >
+            <img src="/Images/arrowwrightt.svg" alt="arrowright" />
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="flex flex-wrap gap-9 pt-6 max-[365px]:justify-center">
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/pedi.jpg)] bg-[length:100px_170px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p class=""></p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">Breed Dry Dog Food</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$260</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/startnorate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/startnorate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (35)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/canon.png)] bg-[length:160px_160px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded flex flex-col max-[1010px]:justify-center gap-6 justify-between"
+            >
+              <div>
+                <div class="flex p-4 items-center justify-between">
+                  <p class=""></p>
+                  <div class="p-1 bg-white rounded-full">
+                    <img src="Images/Wishlist.svg" width="25" alt="" />
+                  </div>
+                </div>
+                <div class="flex justify-between px-4">
+                  <div></div>
+                  <div class="w-40"></div>
+                  <div class="bg-white p-1 h-9 rounded-full">
+                    <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-black hover:bg-[#333] text-white py-2 max-[1010px]:py-0.5 max-[1010px]:text-xs mb-0 text-center cursor-pointer"
+              >
+                Add To Cart
+              </div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">CANON EOS DSLR</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$260</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/startnorate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (95)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/laptop.png)] bg-[length:200px_200px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p class=""></p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">ASUS Gaming Laptop</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$260</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (325)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/creams.png)] bg-[length:200px_320px] max-[1010px]:bg-contain bg-no-repeat bg-bottom rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p class=""></p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">Curology Product Set</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$260</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/startnorate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (145)
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/toycar.png)] bg-[length:170px_170px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p
+                  class="py-1.5 px-4 text-white text-xs bg-[#00ff66] rounded-md"
+                >
+                  New
+                </p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">Kids Electric Car</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$260</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (65)
+                </div>
+              </div>
+              <div class="flex pt-1 gap-6 text-sm">
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/radios/radioone.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/radios/radiozero.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/kit.png)] bg-[length:180px_180px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p class=""></p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">Jr. Zoom Soccer Cleats</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$960</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (35)
+                </div>
+              </div>
+              <div class="flex pt-1 gap-6 text-sm">
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/radios/radiotwo.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/radios/radiozero.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/control.png)] bg-[length:350px_200px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p
+                  class="py-1.5 px-4 text-white text-xs bg-[#00ff66] rounded-md"
+                >
+                  New
+                </p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">GP11 Shooter Gamepad</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$160</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starthalf.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (55)
+                </div>
+              </div>
+              <div class="flex pt-1 gap-6 text-sm">
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/radios/radiothree.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/radios/radiozero.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div
+              class="w-64 h-64 max-[1010px]:w-32 max-[1010px]:h-32 bg-[#f5f5f5] bg-[url(images/Products/jacket.png)] bg-[length:200px_200px] max-[1010px]:bg-contain bg-no-repeat bg-center rounded"
+            >
+              <div class="flex p-4 items-center justify-between">
+                <p class=""></p>
+                <div class="p-1 bg-white rounded-full cursor-pointer">
+                  <img src="Images/Wishlist.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div class="flex justify-between px-4">
+                <div></div>
+                <div class="w-40"></div>
+                <div class="bg-white p-1 h-9 rounded-full cursor-pointer">
+                  <img src="Images/QuickeyeView.svg" width="25" alt="" />
+                </div>
+              </div>
+              <div></div>
+            </div>
+            <div class="pt-3">
+              <p class="max-[1010px]:text-xs">Quilted Satin Jacket</p>
+              <div class="flex gap-3 pt-1">
+                <p class="text-[#db4444]">$960</p>
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starrate.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  /><img
+                    src="/Images/starthalf.svg"
+                    class="w-4 max-[1010px]:w-1"
+                    alt=""
+                  />
+                </div>
+                <div class="font-semibold max-[1010px]:text-xs text-[#5f5f5f]">
+                  (55)
+                </div>
+              </div>
+              <div class="flex pt-1 gap-6 text-sm">
+                <div class="flex gap-1">
+                  <img
+                    src="/Images/radios/radiofour.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                  <img
+                    src="/Images/radios/radiozero.svg"
+                    class="cursor-pointer"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center mt-16">
+        <p
+          class="text-center w-56 text-white bg-[#db4444] hover:bg-[#c63636] rounded py-4 cursor-pointer"
+        >
+          View All Products
+        </p>
+      </div>
+    </section>
+    <section class="pt-20 px-20 max-md:px-10 pb-16">
+      <div class="flex items-center gap-4 font-semibold text-[#db4444]">
+        <img src="/Images/Rectangle17.svg" alt="" />
+        <p>Featured</p>
+      </div>
+      <div class="flex mb-3 mt-5 justify-between">
+        <div class="flex max-sm:shrink justify-between">
+          <p
+            class="discount text-4xl max-sm:text-lg font-semibold tracking-wide"
+          >
+            New Arrival
+          </p>
+        </div>
+        <div class="flex gap-3 max-md:hidden"></div>
+      </div>
+    </section>
+
+    <section class="pt-20 px-20 max-md:px-10 pb-10">
+      <div
+        class="flex gap-4 max-[900px]:flex-col max-[900px]:gap-10 max-md:items-center justify-between"
+      >
+        <div
+          class="flex flex-col justify-between w-xl max-[600px]:w-sm max-[400px]:w-40 h-[600px] bg-black rounded bg-[url(/Images/specs/ps.png)] bg-cover bg-no-repeat bg-center p-10"
+        >
+          <div></div>
+          <div class="text-white flex flex-col gap-3">
+            <p
+              class="discount font-semibold text-2xl max-sm:text-sm tracking-wider"
+            >
+              PlayStation 5
+            </p>
+            <p class="text-sm font-light">
+              Black and White version of the PS5 <br />
+              coming out on sale.
+            </p>
+            <p class="underline underline-offset-4 cursor-pointer">Shop Now</p>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col max-md:gap-10 max-[900px]:gap-10 max-[900px]:justify-center justify-between"
+        >
+          <div
+            class="w-xl max-sm:w-sm max-[400px]:hidden h-72 bg-[#0d0d0d] rounded bg-[url(/Images/specs/woman.jpg)] bg-contain bg-no-repeat transform scale-x-[-1] bg-left flex flex-col justify-between max-md:justify-center p-10"
+          >
+            <div></div>
+            <div class="transform scale-x-[-1] text-white flex flex-col gap-3">
+              <p class="discount font-semibold text-2xl">Women’s Collections</p>
+              <p class="font-light text-sm">
+                Featured woman collections that <br />
+                give you another vibe.
+              </p>
+              <p class="underline underline-offset-4 cursor-pointer">
+                Shop Now
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex gap-3 max-[400px]:flex-col max-[900px]:items-center max-md:justify-between max-[900px]:justify-start max-[900px]:gap-14 max-md:gap-3 justify-between"
+          >
+            <div
+              class="w-64 max-sm:w-40 h-72 bg-black rounded bg-[url(/Images/specs/threespeakers.png),url(/Images/Ellipseonspeaker.png)] bg-no-repeat bg-center flex flex-col justify-between"
+            >
+              <div></div>
+              <div class="text-white p-6 flex flex-col gap-1.5">
+                <p class="discount text-2xl font-semibold">Speakers</p>
+                <p class="text-sm font-light">Amazon wireless speakers</p>
+                <p class="underline underline-offset-4 cursor-pointer">
+                  Shop Now
+                </p>
+              </div>
+            </div>
+            <div
+              class="w-64 max-sm:w-40 h-72 bg-black rounded bg-[url(/Images/specs/gucci.png),url(/Images/Ellipseonspeaker.png)] bg-no-repeat bg-cover bg-center flex flex-col justify-between"
+            >
+              <div></div>
+              <div class="text-white p-6 flex flex-col gap-1.5">
+                <p class="discount text-2xl font-semibold">Perfume</p>
+                <p class="text-sm font-light">GUCCI INTENSE OUD EDP</p>
+                <p class="underline underline-offset-4 cursor-pointer">
+                  Shop Now
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-20 px-20 max-md:px-10 pb-16">
+      <div class="flex max-md:flex-col justify-evenly items-center">
+        <div class="flex flex-col items-center">
+          <div><img src="/Images/service/Services.png" alt="" /></div>
+          <div>
+            <p class="text-lg mt-2 font-semibold">FREE AND FAST DELIVERY</p>
+          </div>
+          <div>
+            <p class="text-sm">Free delivery for all orders over $140</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div><img src="/Images/service/headsphone.png" alt="" /></div>
+          <div>
+            <p class="text-lg mt-2 font-semibold">24/7 CUSTOMER SERVICE</p>
+          </div>
+          <div><p class="text-sm">Friendly 24/7 customer support</p></div>
+        </div>
+        <div class="flex flex-col items-center">
+          <div><img src="/Images/service/badge.png" alt="" /></div>
+          <div>
+            <p class="text-lg mt-2 font-semibold">MONEY BACK GUARANTEE</p>
+          </div>
+          <div><p class="text-sm">We reurn money within 30 days</p></div>
+        </div>
+      </div>
+    </section>
+    <div class="flex justify-end">
+      <div class="bg-[#f5f5f5] mx-24 p-3 rounded-full cursor-pointer">
+        <img src="/Images/uparrow.svg" alt="" />
+      </div>
+    </div>
+    <footer class="bg-black text-white p-24 mt-10">
+      <div class="flex flex-wrap gap-6 justify-between max-sm:flex-col">
+        <div class="flex flex-col gap-5">
+          <p class="discount font-bold text-2xl">Exclusive</p>
+          <p class="text-xl">Subscribe</p>
+          <p class="font-light">Get 10% off your first order</p>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="placeholder:font-light max-[350px]:hidden border border-white rounded p-2.5 bg-[url('/Images/send.svg')] bg-no-repeat bg-[position:right_10px_center]"
+              id=""
+            />
+          </div>
+        </div>
+        <ul class="flex flex-col gap-5">
+          <li><p class="text-xl">Support</p></li>
+          <li>
+            <p class="font-light cursor-pointer">
+              111 Bijoy sarani, Dhaka, <br />
+              DH 1515, Bangladesh.
+            </p>
+          </li>
+          <li class="font-light cursor-pointer max-[300px]:hidden">
+            <a href="#">exclusive@gmail.com</a>
+          </li>
+          <li><p class="font-light cursor-pointer">+88015-88888-9999</p></li>
+        </ul>
+        <ul class="flex flex-col gap-5">
+          <li class="text-xl">Account</li>
+          <li class="font-light cursor-pointer">My Account</li>
+          <li class="font-light cursor-pointer">Login / Register</li>
+          <li class="font-light cursor-pointer">Cart</li>
+          <li class="font-light cursor-pointer">Wishlist</li>
+          <li class="font-light cursor-pointer">Shop</li>
+        </ul>
+        <ul class="flex flex-col gap-5">
+          <li class="text-xl">Quick Link</li>
+          <li class="font-light cursor-pointer">Privacy Policy</li>
+          <li class="font-light cursor-pointer">Terms Of Use</li>
+          <li class="font-light cursor-pointer">FAQ</li>
+          <li class="font-light cursor-pointer">Contact</li>
+        </ul>
+        <div class="flex flex-col gap-5">
+          <p class="text-xl">Download App</p>
+          <div class="flex flex-col gap-3">
+            <div><p class="text-xs">Save $3 with App New User Only</p></div>
+            <div class="flex justify-between">
+              <div>
+                <img
+                  src="/Images/QR.jpg"
+                  class="w-20 border border-white"
+                  alt="QR"
+                />
+              </div>
+              <div class="flex flex-col justify-between">
+                <div>
+                  <img src="/Images/playstore.svg" alt="" />
+                </div>
+                <div>
+                  <img src="/Images/appstore.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <img src="/Images/facebook.svg" class="cursor-pointer" alt="" />
+            <img src="/Images/tweet.svg" class="cursor-pointer" alt="" />
+            <img src="/Images/insta.svg" class="cursor-pointer" alt="" />
+            <img src="/Images/in.svg" class="cursor-pointer" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <hr class="text-[#ffffff3f] bg-black" />
+    <div
+      class="bg-black font-light text-[#ffffff3f] py-4 text-center max-sm:text-xs"
+    >
+      &copy; Copyright Rimel 2022. All right reserved
+    </div>
+  </body>
+</html>
